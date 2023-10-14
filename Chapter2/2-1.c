@@ -1,17 +1,33 @@
-/*
- ============================================================================
- Name        : 2-1.c
- Author      : Deokhwan23
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
- ============================================================================
- */
+// 문제 2-1
+// 정숫값을 읽어 들인 후 이에 10을 뺀 값, 10을 곱한 값, 10으로 나눈 몫과 나머지를 출력하는 프로그램을 작성하자.
 
 #include <stdio.h>
-#include <stdlib.h>
 
 int main(void) {
-	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
-	return EXIT_SUCCESS;
+	int n;
+
+	printf("정수를 입력하세요 : ");
+	scanf("%d", &n);
+
+	printf("10을 더하면 %d입니다.\n", n + 10);
+	printf("10을 빼면 %d입니다.\n", n - 10);
+	printf("10을 곱하면 %d입니다.\n", n * 10);
+	printf("10으로 나눈 몫은 %d입니다.\n", n / 10);
+	printf("10으로 나눈 나머지는 %d입니다.\n", n % 10);
+
+	return 0;
 }
+
+// 연산자(operator): 합을 구하는 +나 곱을 구하는 * 등의 기호
+// 피연산자(operand): 그 연산의 대상이 되는 변수나 상수 등
+/* ex) n + 10 -> +: 연산자, n, 10 -> 피연산자
+      (n: 제1피연산자 또는 왼쪽 피연산자, 10: 제2피연산자 또는 오른쪽 피연산자) */
+
+/* 곱셈 나눗셈 연산자(multiplicative operand)
+   2항*연산자   a*b   a와 b의 곱
+   2항/연산자   a/b   a를 b로 나눈 몫(정수끼리일 때는 소수점 이하 버림)
+   2항%연산자   a%b   a를 b로 나눈 나머지(a와 b는 정수여야 함)
+
+   덧셈 뺄셈 연산자(additive operand)
+   2항+연산자   a+b   a와 b의 합
+   2항-연산자   a-b   a에서 b를 뺀 값 */
